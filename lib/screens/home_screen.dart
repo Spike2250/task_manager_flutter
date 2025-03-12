@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/task_provider.dart';
+import '../providers/theme_provider.dart';
 import '../widgets/task_list.dart';
 import '../widgets/add_task_dialog.dart';
 
@@ -12,6 +13,16 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Center(child: Text('Task Manager')),
+        actions: [
+          Consumer<ThemeProvider>(
+            builder: (ctx, themeProvider, _) => IconButton(
+              icon: Icon(themeProvider.isDarkMode 
+                  ? Icons.light_mode 
+                  : Icons.dark_mode),
+              onPressed: () => themeProvider.toggleTheme(),
+            ),
+          ),
+        ],
       ),
       body: Column(
         children: [

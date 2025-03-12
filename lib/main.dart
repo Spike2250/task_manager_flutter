@@ -3,13 +3,10 @@ import 'package:provider/provider.dart';
 import 'package:task_manager_flutter/providers/task_provider.dart';
 import 'package:task_manager_flutter/screens/home_screen.dart';
 
+import 'package:task_manager_flutter/providers/theme_provider.dart';
+
 void main() {
-  runApp(
-    ChangeNotifierProvider(
-      create: (ctx) => TaskProvider(),
-      child: const MyApp(),
-    ),
-  );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -17,13 +14,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Task Manager',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        useMaterial3: true,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (ctx) => TaskProvider()),
+        ChangeNotifierProvider(create: (ctx) => ThemeProvider()),
+      ],
+      child: Consumer<ThemeProvider>(
+        builder: (ctx, themeProvider, _) => MaterialApp(
+          title: 'Task Manager',
+          theme: themeProvider.isDarkMode 
+              ? ThemeData.dark(useMaterial3: true)
+              : ThemeData.light(useMaterial3: true),
+          home: const HomeScreen(),
+        ),
       ),
-      home: const HomeScreen(),
     );
   }
 }
