@@ -31,9 +31,22 @@ class TaskItem extends StatelessWidget {
             decoration: task.isCompleted 
                 ? TextDecoration.lineThrough 
                 : TextDecoration.none,
+            color: Theme.of(context).textTheme.titleMedium?.color?.withValues(
+              alpha: task.isCompleted ? 0.4 : 1.0
+            ),
           ),
         ),
-        subtitle: Text(task.description),
+        subtitle: Text(
+          task.description,
+          style: TextStyle(
+            decoration: task.isCompleted 
+                ? TextDecoration.lineThrough 
+                : TextDecoration.none,
+            color: Theme.of(context).textTheme.bodyMedium?.color?.withValues(
+              alpha: task.isCompleted ? 0.4 : 1.0
+            ),
+          ),
+        ),
         value: task.isCompleted,
         onChanged: (value) => Provider.of<TaskProvider>(context, listen: false)
             .toggleTaskStatus(task.id),
