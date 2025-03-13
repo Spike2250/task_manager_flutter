@@ -25,7 +25,14 @@ class TaskItem extends StatelessWidget {
         return false;
       },
       child: CheckboxListTile(
-        title: Text(task.title),
+        title: Text(
+          task.title,
+          style: TextStyle(
+            decoration: task.isCompleted 
+                ? TextDecoration.lineThrough 
+                : TextDecoration.none,
+          ),
+        ),
         subtitle: Text(task.description),
         value: task.isCompleted,
         onChanged: (value) => Provider.of<TaskProvider>(context, listen: false)
