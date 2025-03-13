@@ -1,16 +1,79 @@
-# task_manager_flutter
+# Task Manager Flutter Application
 
-A new Flutter project.
+Менеджер задач с поддержкой нескольких платформ на Flutter.
 
-## Getting Started
+![App Preview](docs/preview.gif)
 
-This project is a starting point for a Flutter application.
+## 🌍 Поддерживаемые платформы
+- Android
+- iOS
+- Web
+- Windows
+- macOS
+- Linux
 
-A few resources to get you started if this is your first Flutter project:
+## ⚙️ Основные функции
+- Создание задач с названием и описанием
+- Редактирование существующих задач
+- Удаление задач
+- Переключение светлой/темной темы
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 📦 Установка
+Подробные инструкции по установке смотрите в [INSTALL.md](https://github.com/Spike2250/task_manager_flutter/INSTALL.md)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠 Технологии
+- Flutter 3.x
+- Dart 3.x
+- Provider для управления состоянием
+
+## 🗂 Структура проекта
+```
+lib/
+├── models/       # Модели данных
+├── providers/    # Провайдеры состояния
+├── screens/      # Основные экраны
+├── widgets/      # Переиспользуемые виджеты
+└── main.dart     # Точка входа
+```
+
+---
+
+# Task Manager Flutter Application
+
+Cross-platform task manager built with Flutter.
+
+## 🌍 Supported Platforms
+- Android
+- iOS
+- Web
+- Windows
+- macOS
+- Linux
+
+## ⚙️ Key Features
+- Create tasks with title and description
+- Edit existing tasks
+- Delete tasks
+- Light/dark theme switching
+
+## 📦 Installation
+See detailed setup instructions in [INSTALL.md](https://github.com/Spike2250/task_manager_flutter/INSTALL.md)
+
+## 🛠 Technologies
+- Flutter 3.x
+- Dart 3.x
+- Provider for state management
+- SQLite for local storage
+- Internationalization support
+
+## 🗂 Project Structure
+```
+lib/
+├── models/       # Data models
+├── providers/    # State providers
+├── screens/      # Main screens
+├── widgets/      # Reusable widgets
+└── main.dart     # Entry point
+```
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
