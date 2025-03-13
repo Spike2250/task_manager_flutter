@@ -2,9 +2,9 @@
 
 Менеджер задач с поддержкой нескольких платформ на Flutter.
 
-![App Screenshot 1](https://storage.yandexcloud.net/spike2250-datasets/Screens/Task_manager_flutter/Screenshot_20250313_220223.png)
-![App Screenshot 2](https://storage.yandexcloud.net/spike2250-datasets/Screens/Task_manager_flutter/Screenshot_20250313_220311.png)
-![App Screenshot 3](https://storage.yandexcloud.net/spike2250-datasets/Screens/Task_manager_flutter/Screenshot_20250313_220401.png)
+<img src="https://storage.yandexcloud.net/spike2250-datasets/Screens/Task_manager_flutter/Screenshot_20250313_220223.png" width="200">
+<img src="https://storage.yandexcloud.net/spike2250-datasets/Screens/Task_manager_flutter/Screenshot_20250313_220311.png" width="200">
+<img src="https://storage.yandexcloud.net/spike2250-datasets/Screens/Task_manager_flutter/Screenshot_20250313_220401.png" width="200">
 
 ## 🌍 Поддерживаемые платформы
 - Android
