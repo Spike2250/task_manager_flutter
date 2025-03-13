@@ -22,9 +22,7 @@ class MyApp extends StatelessWidget {
       child: Consumer<ThemeProvider>(
         builder: (ctx, themeProvider, _) => MaterialApp(
           title: 'Task Manager',
-          theme: themeProvider.isDarkMode 
-              ? ThemeData.dark(useMaterial3: true)
-              : ThemeData.light(useMaterial3: true),
+          theme: themeProvider.themeData,
           home: const HomeScreen(),
         ),
       ),
